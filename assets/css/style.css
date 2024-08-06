@@ -20,6 +20,15 @@ body {
     font-family: lato, sans-serif;
 }
 
+h1,
+h2,
+h3 {
+    font-family: oswald, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
 /* Header */
 header {
     background-color: #ffffff;
@@ -39,12 +48,6 @@ header a {
 
 }
 
-h1 {
-    font-family: oswald, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-}
 
 #menu {
     font-size: 110%;
@@ -90,7 +93,7 @@ nav {
 }
 
 /* main content */
-main {    
+main {
     /* Make main element take yup any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
@@ -101,6 +104,22 @@ main {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
+}
+
+#cover-text {
+    /* Final RGBA valve sets the opacity si it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+}
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
 }
 
 /* footer */
@@ -149,15 +168,23 @@ main {
         margin: 0 0.5rem;
     }
 }
-/*main content */
-    main {
-        /*push main content down to accommodae larger header */
-        margin-top: 79px;
-    }
 
-    @media screen and (min-width: 992px) {
-        /* hover over for the A elements */
-        a:hover {
-            border-bottom: 1px solid #3a3a3a;
-        }
+/*main content */
+main {
+    /*push main content down to accommodae larger header */
+    margin-top: 79px;
+}
+
+#cover-text {
+    width: 300px;
+    right: 50px;
+}
+
+/* Large devices (laptops and Desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+    /* hover over for the A elements */
+    a:hover {
+        border-bottom: 1px solid #3a3a3a;
     }
+}
