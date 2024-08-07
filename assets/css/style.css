@@ -220,7 +220,13 @@ hr {
 }
 
 
-
+/* media query: Large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+}
+}
 
 
 /* media query: tablets and larger (768 and up) */
@@ -280,6 +286,10 @@ hr {
         width: 300px;
         right: 50px;
     }
+
+    #photos {
+        column-count: 3;
+    }
 }
 
 /* Large devices (laptops and Desktops, 992px and up) */
@@ -317,5 +327,8 @@ hr {
 
     #benefits-physical>div {
         align-self: flex-end;
+    }
+    #photos {
+        column-count: 4;
     }
 }
